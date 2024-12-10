@@ -1,0 +1,128 @@
+﻿@model PagedList.IPagedList<EduCase.Models.tblStudent>
+@using PagedList
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Logout.cshtml";
+}
+
+<head>
+    <link href="~/CSS/Index.css" rel="stylesheet" />
+</head>
+<div class="form-horizontal">
+    <h2>Index</h2>
+</div>
+<span style="background-color: white; padding: 5px;">
+    @Html.ActionLink("Create New", "Create")
+</span>
+
+@using (Html.BeginForm("DeleteMultiple", "Student", FormMethod.Post))
+{ 
+    <table align="left" class="table">
+        <tr>
+            <th>
+                Select
+            </th>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Date of Birth
+            </th>
+            <th>
+                Gender
+            </th>
+            <th>
+                Mobile
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Cricket
+            </th>
+            <th>
+                Volleyball
+            </th>
+            <th>
+                Gaming
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Standard ID
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Details
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="selectedIds" value="@item.s_id"   />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_dob)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_mob)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_cricket)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_volleyball)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_gaming)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.s_standardid)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.s_id, @class = "btn btn-danger btn-sm" })
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.s_id })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.s_id })
+                </td>
+            </tr>
+        }
+    </table>
+<button type="submit" class="btn btn-primary" name="submitType" value="deleteSelected">Delete Selected</button>
+<button type="submit" class="btn btn-primary" name="submitType" value="deleteAll">Delete All</button>
+}
+
+<div class="pager">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+</div>

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+<head>
+    <link href="~/CSS/Index1.css" rel="stylesheet" />
+    </head>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Student Management System</title>
+
+        </head>
+        <body>
+            <div class="content">
+                <h2>@ViewBag.Title</h2>
+                <div class="hero-image">
+                    <div class="hero-text">
+                        <h1>Welcome to the Student Management System</h1>
+                        <p>Manage students, courses, and grades with ease.</p>
+                        <a href="@Url.Action("Register", "User")" class="button">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>

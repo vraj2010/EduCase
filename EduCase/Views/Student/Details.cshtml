@@ -1,0 +1,110 @@
+﻿@model EduCase.Models.tblStudent
+
+@{
+    ViewBag.Title = "Details";
+    Layout = " ~/Views/Shared/_Logout.cshtml";
+}
+
+<head>
+    <link href="~/CSS/Details.css" rel="stylesheet" />
+</head>
+
+<div>
+
+    <dl class="dl-horizontal">
+        <h2>Details</h2>
+        <hr />
+        <dt>
+            @Html.DisplayNameFor(model => model.s_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_dob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_dob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_mob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_mob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_cricket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_cricket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_volleyball)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_volleyball)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_gaming)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_gaming)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.s_standardid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_standardid)
+        </dd>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </dl>
+</div>
+

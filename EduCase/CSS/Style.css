@@ -1,0 +1,64 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: linear-gradient(to right, #00c8ff 0%, #00ff1a 100%);
+    max-width: 500px;
+    align-items: center;
+    margin-left: 250px;
+}
+.form-horizontal {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.form-horizontal {
+    margin-top: 30px;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    position: relative;
+}
+.form-horizontal h2:before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 33px;
+    left: 0px;
+    bottom: 3px;
+    top: 30px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #00c8ff 0%, #00ff1a 100%);
+}
+
+input[type=submit] {
+    height: 40px;
+    width: 50%;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #00c8ff;
+}
+input[type=submit]:hover {
+    background: green;
+}
+.form-control{
+    margin-left: 15px;
+}
